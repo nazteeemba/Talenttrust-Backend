@@ -24,7 +24,7 @@ module.exports = {
     // 'reputation.controller.test.ts', — re-enabled: rating range validation tests
     'src/auth/__tests__/roles.test.ts',
     'src/config/config.test.ts',
-    // 'src/controllers/__tests__/apiKeyController.test.ts', — re-enabled per issue #1403: integration coverage restored
+    'src/controllers/__tests__/apiKeyController.test.ts',
     'src/httpClient.test.ts',
     'src/index.test.ts',
     'src/logger.test.ts',
