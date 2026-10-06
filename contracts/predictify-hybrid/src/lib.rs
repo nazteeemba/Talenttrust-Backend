@@ -11,7 +11,7 @@
 //! submissions with the same `(caller, key)` pair are rejected with
 //! `Error::IdempotentBatchAlreadyApplied`.
 
-#[no_std]
+#![no_std]
 
 #[cfg(test)]
 mod batch_operations_tests;
@@ -19,22 +19,13 @@ mod bets;
 mod errors;
 mod storage;
 
-#[cfg(test)]
-mod batch_operations_tests;
-#[cfg(test)]
-mod storage_tests;
-
-pub use bets::Bet;
-pub use errors::Error;
-pub use storage::{DataKey, IDEM_KEY_TTL_LEDGERS};
-
 pub use bets::{BatchReceipt, Bet, MAX_BETS_PER_BATCH};
 pub use errors::Error;
 pub use storage::{DataKey, IDEM_KEY_TTL_LEDGERS, IDEM_KEY_TTL_THRESHOLD_LEDGERS};
 
-use soroban_sdk::{contract, contractimpl, Address, BytesN<32>, Env, Vec};
+use soroban_sdk::{contract, contractimpl, Address, BytesN, Env, Vec};
 
-/// Maximum number of bets accepted in a single ``place_bets``b call.
+/// Maximum number of bets accepted in a single `place_bets` call.
 ///
 /// This is a hard boundary that protects the contract from
 /// unbounded work and from gas exhaustion attacks. It is part of
@@ -60,6 +51,3 @@ impl PredictifyHybrid {
         bets::place_bets(&env, caller, bets, idempotency_key)
     }
 }
-
-#[cfg(test)]
-mod batch_operations_tests;

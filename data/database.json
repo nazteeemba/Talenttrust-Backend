@@ -4,18 +4,18 @@
   "users": [],
   "api_keys": [
     {
-      "id": "4fd2d09f-ece7-4bea-a314-0780b0fbed7e",
-      "name": "Test Key",
-      "key_hash": "ad30bcf1af7cabdc53d2b19f8eba92bc:811850ba14d3443c50ac9250f88ddc39f50679f30f8dd7edcc316d690137db758fad7481f84f6e4625e558120a560084f092b51ca05a722837edb72188113207",
-      "key_selector": "767f27832366804b7639fd470c0d0317b21929b798544eff28e1f943aff0d38c",
+      "name": "Expired No Timestamp Key",
+      "key_hash": "1c315104fd9199a9de5109f35fe04331:307e8afe9c7727272f07043a9da7fb67b445530fb35f88e702e8a1da346992eeb9a72e99b465cae83727efb759fc1ddb913875f2cd401b7448acac3262b48310",
+      "key_selector": "9b9ae1a0e8b1f352a94b7d77c2aa3c9abffc04a922d0f040fd3cbb19c1b04ac5",
       "scope": [
         "contracts:read"
       ],
-      "created_by": "user-1",
-      "created_at": "2026-08-29T11:43:45.799Z",
-      "updated_at": "2026-08-29T11:43:45.799Z",
-      "call_count": 0,
-      "is_active": true
+      "created_by": "user123",
+      "expires_at": "2020-01-01T00:00:00.000Z",
+      "is_active": false,
+      "id": "440994a8-ccba-4d71-818e-2a83b547b0dd",
+      "created_at": "2026-10-06T09:06:58.396Z",
+      "updated_at": "2026-10-06T09:06:58.437Z"
     }
   ]
 }
